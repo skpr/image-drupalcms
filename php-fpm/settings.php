@@ -15,6 +15,7 @@ $settings['file_private_path'] = 'sites/default/files/private';
 $settings['hash_salt'] = !empty($settings['hash_salt']) ? $settings['hash_salt'] : 'xxxxxxxxxxxxxxxxxxxx';
 
 $settings['trusted_host_patterns'][] = '^127\.0\.0\.1$';
+$settings['trusted_host_patterns'][] = '^[a-z\-0-9]{1,32}\.localhost$';
 
 $settings['php_storage']['twig'] = [
   'directory' => (DRUPAL_ROOT . '/..') . '/.php',
