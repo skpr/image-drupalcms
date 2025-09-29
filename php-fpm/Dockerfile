@@ -1,8 +1,8 @@
 # Download and extract Drupal CMS.
 FROM alpine:latest as drupal
 RUN apk add unzip
-ADD https://drupal.org/drupal-cms/1.0.0-rc1.zip /tmp
-RUN unzip /tmp/1.0.0-rc1.zip
+ADD https://ftp.drupal.org/files/projects/cms-1.2.5.zip /tmp
+RUN unzip /tmp/cms-1.2.5.zip
 RUN mv drupal-cms /data
 
 FROM skpr/php-fpm:8.3-v2-latest
